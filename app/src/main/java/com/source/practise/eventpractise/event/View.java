@@ -1,10 +1,10 @@
-package com.source.practise.eventpractise;
+package com.source.practise.eventpractise.event;
 
-import com.source.practise.eventpractise.listener.OnClickListener;
-import com.source.practise.eventpractise.listener.OnTouchListener;
+import com.source.practise.eventpractise.event.listener.OnClickListener;
+import com.source.practise.eventpractise.event.listener.OnTouchListener;
 
 /**
- * <p>Class: com.source.practise.eventpractise.View</p>
+ * <p>Class: com.source.practise.eventpractise.event.View</p>
  * <p>Description: </p>
  * <pre>
  *

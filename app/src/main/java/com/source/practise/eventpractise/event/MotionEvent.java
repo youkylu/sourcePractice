@@ -1,7 +1,7 @@
-package com.source.practise.eventpractise;
+package com.source.practise.eventpractise.event;
 
 /**
- * <p>Class: com.source.practise.eventpractise.MotionEvent</p>
+ * <p>Class: com.source.practise.eventpractise.event.MotionEvent</p>
  * <p>Description: </p>
  * <pre>
  *

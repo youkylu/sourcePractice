@@ -1,10 +1,10 @@
-package com.source.practise.eventpractise;
+package com.source.practise.eventpractise.event;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>Class: com.source.practise.eventpractise.ViewGroup</p>
+ * <p>Class: com.source.practise.eventpractise.event.ViewGroup</p>
  * <p>Description: </p>
  * <pre>
  *
@@ -120,7 +120,12 @@ public class ViewGroup extends View {
     //分发处理 子控件  View
     private boolean dispatchTransformedTouchEvent(MotionEvent event, View child) {
         final boolean handled;
-        handled = child.dispatchTouchEvent(event);
+        if(child!=null){
+            handled = child.dispatchTouchEvent(event);
+        }else{
+            handled = super.dispatchTouchEvent(event);
+        }
+
 
         return handled;
 
