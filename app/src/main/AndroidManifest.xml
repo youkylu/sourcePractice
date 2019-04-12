@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".animator.MyAnimatorMainActivity"></activity>
+        <activity android:name=".red_book_splash.ReadBookSplashActivity"></activity>
+        <activity android:name=".red_book_splash.SplashActivity"></activity>
     </application>
 
 </manifest>
