@@ -32,7 +32,7 @@ public class MyLinearLayout extends LinearLayout {
         //在child view外面包裹一层容器----偷梁换柱
        MyLayoutParams p  =(MyLayoutParams) params;
 
-       if(isDiscrollvable(p)){
+       if(!isDiscrollvable(p)){
            super.addView(child, index, params);
        }else{
             MyFrameLayout mf = new MyFrameLayout(getContext(), null);

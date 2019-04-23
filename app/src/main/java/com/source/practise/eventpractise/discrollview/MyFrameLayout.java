@@ -151,22 +151,20 @@ public class MyFrameLayout extends FrameLayout implements DiscrollInterface {
             setScaleY(ratio);
         }
         //平移---int值： left，right，top，bottom，   left|bottom
-        if (isTranslationFrom(TRANSLATION_FROM_BOTTOM)) {
-            setTranslationY(mHeight * (1 - ratio));
+        if(isTranslationFrom(TRANSLATION_FROM_BOTTOM)){//是否是fromBottom
+            setTranslationY(mHeight*(1-ratio));//height-->0 (0代表原来的位置)
         }
-
-        if (isTranslationFrom(TRANSLATION_FROM_TOP)) {
-            setTranslationY(-mHeight * (1 - ratio));
+        if(isTranslationFrom(TRANSLATION_FROM_TOP)){//从顶部平移进来
+            setTranslationY(-mHeight*(1-ratio));//-height--->0
         }
-
-        if (isTranslationFrom(TRANSLATION_FROM_LEFT)) {
-            setTranslationX(-mWidth * (1 - ratio));
+        if(isTranslationFrom(TRANSLATION_FROM_LEFT)){
+            setTranslationX(-mWidth*(1-ratio));//mWidth--->0(0代表恢复到本来原来的位置)
         }
-        if (isTranslationFrom(TRANSLATION_FROM_RIGHT)) {
-            setTranslationX(mWidth * (1 - ratio));//-mWidth--->0(0代表恢复到本来原来的位置)
+        if(isTranslationFrom(TRANSLATION_FROM_RIGHT)){
+            setTranslationX(mWidth*(1-ratio));//-mWidth--->0(0代表恢复到本来原来的位置)
         }
         //判断从什么颜色到什么颜色
-        if (mDiscrollveFromBgColor != -1 && mDiscrollveToBgColor != -1) {
+        if(mDiscrollveFromBgColor!=-1&&mDiscrollveToBgColor!=-1){
             setBackgroundColor((int) sArgbEvaluator.evaluate(ratio, mDiscrollveFromBgColor, mDiscrollveToBgColor));
         }
     }
